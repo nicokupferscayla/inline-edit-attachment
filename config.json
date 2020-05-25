@@ -1,0 +1,16 @@
+{
+  "appName": "Scayla Companion App",
+  "wsPort": "31415",
+  "width": 300,
+  "height": 300,
+  "resizable": false,
+  "trayIcon": "images/tray.png",
+  "status": {
+    "i": "Connected",
+    "o": "Disconnected"
+  },
+  "statusColor": {
+    "i": "#61c771",
+    "o": "#d0021b"
+  }
+}

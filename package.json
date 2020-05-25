@@ -1,0 +1,50 @@
+{
+  "name": "scayla-companion-app",
+  "version": "0.0.1",
+  "license": "Proprietary",
+  "description": "Inline edit attachments for Scayla",
+  "author": "Nico Kupfer <nicolas.kupfer@scayla.com>",
+  "main": "main.js",
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "build": {
+    "appId": "yourappid",
+    "category": "your.app.category.type",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "squirrel",
+      "icon": "build/icon.ico"
+    }
+  },
+  "dependencies": {
+    "electron-dl": "^3.0.0",
+    "ws": "^7.3.0"
+  },
+  "devDependencies": {
+    "electron": "^9.0.0",
+    "electron-builder": "latest"
+  }
+}

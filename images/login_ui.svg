@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1068px" height="213px" viewBox="0 0 1068 213" version="1.1" xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+  <title>Rectangle</title>
+  <desc>Created with Sketch.</desc>
+  <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="LogIn4_verification" transform="translate(-116.000000, -660.000000)">
+      <g id="Rectangle" transform="translate(116.000000, 660.062500)">
+        <g id="Mask" opacity="0.089890253" fill="#3A87AD">
+          <g id="colors/Blue" opacity="0.5" transform="translate(765.000000, 98.000000)">
+            <rect id="Rectangle" x="0" y="0" width="166" height="113"></rect>
+          </g>
+          <g id="colors/Blue" opacity="0.5"
+             transform="translate(997.000000, 126.500000) scale(-1, 1) translate(-997.000000, -126.500000) translate(947.000000, 42.000000)">
+            <rect id="Rectangle" x="0" y="0" width="100" height="169"></rect>
+          </g>
+          <g id="colors/Blue"
+             transform="translate(999.500000, 199.000000) scale(-1, 1) translate(-999.500000, -199.000000) translate(931.000000, 187.000000)">
+            <rect id="Rectangle" x="0" y="0" width="137" height="24"></rect>
+          </g>
+          <g id="colors/Blue" transform="translate(594.000000, 131.000000)">
+            <rect id="Rectangle" x="0" y="0" width="144" height="80"></rect>
+          </g>
+          <g id="colors/Blue" transform="translate(680.000000, 87.000000)">
+            <rect id="Rectangle" x="0" y="0" width="58" height="80"></rect>
+          </g>
+          <g id="colors/Blue" transform="translate(530.000000, 0.000000)">
+            <rect id="Rectangle" x="0" y="0" width="75" height="211"></rect>
+          </g>
+          <g id="colors/Blue" transform="translate(444.000000, 86.000000)">
+            <rect id="Rectangle" x="0" y="0" width="44" height="125"></rect>
+          </g>
+          <g id="colors/Blue" transform="translate(304.000000, 125.000000)">
+            <rect id="Rectangle" x="0" y="0" width="123" height="86"></rect>
+          </g>
+          <g id="colors/Blue" opacity="0.5" transform="translate(165.000000, 29.000000)">
+            <rect id="Rectangle" x="0" y="0" width="123" height="183"></rect>
+          </g>
+          <g id="colors/Blue" transform="translate(51.000000, 2.000000)">
+            <rect id="Rectangle" x="0" y="0" width="83" height="209"></rect>
+          </g>
+          <g id="colors/Blue" opacity="0.5" transform="translate(0.000000, 119.000000)">
+            <rect id="Rectangle" x="0" y="0" width="166" height="93"></rect>
+          </g>
+        </g>
+        <rect x="0" y="0" width="1068" height="211"></rect>
+      </g>
+    </g>
+  </g>
+</svg>
