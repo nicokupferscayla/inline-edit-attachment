@@ -9,6 +9,7 @@
     "postinstall": "install-app-deps",
     "start": "sass styles/_main.scss styles/main.css && electron .",
     "pack": "build --dir",
+    "clean": "modclean -n default:safe",
     "dist": "electron-builder",
     "build": "electron-builder --dir"
   },
