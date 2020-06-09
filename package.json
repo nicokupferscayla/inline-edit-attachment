@@ -7,26 +7,15 @@
   "main": "main.js",
   "scripts": {
     "postinstall": "install-app-deps",
-    "start": "electron .",
+    "start": "sass styles/_main.scss styles/main.css && electron .",
     "pack": "build --dir",
     "dist": "build"
   },
   "build": {
-    "appId": "yourappid",
-    "category": "your.app.category.type",
-    "dmg": {
-      "contents": [
-        {
-          "x": 110,
-          "y": 150
-        },
-        {
-          "x": 240,
-          "y": 150,
-          "type": "link",
-          "path": "/Applications"
-        }
-      ]
+    "appId": "scayla-companion-app",
+    "mac": {
+      "type": "dmg",
+      "category": "com.scayla.inline-edit"
     },
     "linux": {
       "target": [
@@ -45,6 +34,7 @@
   },
   "devDependencies": {
     "electron": "^9.0.0",
-    "electron-builder": "latest"
+    "electron-builder": "latest",
+    "sass": "^1.26.8"
   }
 }

@@ -1,0 +1,38 @@
+/////////////////////////////////////////////
+// DO NOT TOUCH THESE VALUES - Provided by Albert ////////////////
+$scayla-font-family: 'Roboto', 'Lato', sans-serif;
+$x-large-font-size: 5rem; // was 48px;
+$large-font-size: 3.5rem; // was 36px;
+
+// Albert 03.02.2020: (was 1.1875rem)
+$header-font-size: 1.125rem; // the font-size for parents of content: Table, Main and Metadata "headers" 19px
+$big-font-size: 1rem; // default font size for everything 16px
+$font-size: 0.8125rem; // default font size for everything 13px
+$x-small-font-size: 0.5rem; // default font size for everything 8px
+$micro-font-size: 0.375rem; // for now, only used for error messages on address. 6px
+$subject-font-size: 0.9375rem; // 15px
+$subject-field-height: 40px;
+
+$no-bold: normal;
+$bold: 500;
+$heavy-bold: 700;
+$thick-font-weight: $bold;
+// Albert 03.02.2020:
+$header-font-weight: $heavy-bold;
+$content-weight: 400;
+
+$material-chip-margin: 4px;
+
+$line-height-jumbo: 200px; // unused for now
+$line-height-title: 100px; // main title? // unused
+
+$dropdown-line-height: 2.25rem; // for drop-downs: 36px
+$header-line-height: 2rem; // for headers; 32px
+$big-line-height: 1.625rem; // for sub-headers and some content 26px
+$line-height: 1.125rem; // for small items like metadata 18px
+$x-small-line-height: 0.75rem; // for small items like metadata 12px
+$table-tree-row-height: 1.875rem; // for elements inside rows 30px
+
+$icon-standard-size: 24px; // standard from Angular - so we don't use REM
+
+$disabled-opacity: .4;

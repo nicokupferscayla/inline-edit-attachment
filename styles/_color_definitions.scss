@@ -1,0 +1,73 @@
+// For the future, All the variables can be defined in a "colors.CSS" file, and make styles.scss import it.
+// Then all the SCSS variables must follow this format:
+
+//:root {
+//  --blue: #004e70;
+//}
+//$dark-blue:     var(--blue);
+
+// Scayla colors
+$dark-blue: #004e70;
+$blue: #3a87ad;
+$light-blue: #d9edf7;
+$hover-blue: #e5edf1;
+
+$orange: #f5a623;
+$dark-yellow: #c09853;
+$yellow: #ffd800;
+$light-yellow: #fcf8e3;
+
+$green: #61c771;
+$light-green: #dff0d8;
+
+$dark-red: #d0021b;
+$red: #d0021b;
+$light-red: #ed3e53;
+$red-bg: #f2dede;
+
+$black: #333333;
+$dark-grey: #999999;
+$material-grey: #9b9b9b; // same color as default material angular text.
+$grey: #cacaca;
+$box-shadow: #dadada;
+$back-grey: #f0f0f0;
+$light-grey: #fafafa;
+$white: #ffffff;
+
+
+///////////////////////////////////////////////////
+
+$primary-color: $dark-blue;
+$secondary-color: $blue;
+$primary-color-text: $white; // for $primary-color backgrounds,   this is the main text color
+$secondary-color-text: $white; // for $secondary-color backgrounds, this is the main text color
+
+
+$text-primary-color: $black;
+$text-secondary-color: $dark-grey;
+
+$secondary-button-color: $secondary-color;
+
+$link-color: $primary-color;
+$primary-button-color: $primary-color;
+$scayla-header-background-color: $primary-color;
+$scayla-header-text-color: $primary-color-text;
+
+$app-background-color: $back-grey; // the background color for anything that is NOT content (i.e. body)
+$content-background-color: $white; // the background color for the content of the bars
+$hover-background-color: $light-blue; // another background color, i.e. for hovering or tables on the content
+$subtle-border-color: $back-grey;
+
+$error-color: $light-red;
+$warning-color: $yellow;
+$success-color: $green;
+
+$error-color-text: $white;
+$warning-color-text: $black;
+$success-color-text: $white;
+
+$button-active: $black;
+$button-inactive: $dark-grey;
+
+$button-border-color: $grey;
+$button-border-radius: 4px;

@@ -1,18 +1,61 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/roboto/Roboto-Regular.ttf");
+}
 html, body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    font-family: "Roboto Light", sans-serif;
-    background-color: #e5edf1;
-    background-image: url('./../images/login_ui.svg');
-    background-repeat: no-repeat;
-    background-position: bottom;
+  font-family: "Roboto", "Lato", sans-serif;
+  color: #333333;
+  background-color: #e5edf1;
+  background-image: url("./../images/login_ui.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .logo-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The status of the Websocket (connected/disconnected) */
+#ws-status {
+  padding: 8px;
+  border-radius: 4px;
+}
+#ws-status.connected {
+  color: #ffffff;
+  background: rgba(97, 199, 113, 0.6);
+  border: 1px solid;
+}
+#ws-status.disconnected {
+  color: #ffffff;
+  background: rgba(237, 62, 83, 0.6);
+  border: 1px solid;
+}
+
+#html-logger {
+  border: 1px solid #999999;
+  color: #999999;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 4px;
+  font-size: 0.8125rem;
+}
+#html-logger:empty {
+  display: none;
+}
+
+/*# sourceMappingURL=main.css.map */

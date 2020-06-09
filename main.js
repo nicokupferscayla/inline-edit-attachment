@@ -1,27 +1,33 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow, nativeImage, Tray, Menu, screen, ipcMain, shell } = require('electron');
+const {app, BrowserWindow, nativeImage, Tray, Menu, screen, ipcMain, shell} = require('electron');
 const path = require('path');
 const config = require('./config.json');
-const { IPCEvent } = require('./constants');
+const {IPCEvent, language, SocketStatus} = require('./constants');
 
 const {download} = require('electron-dl');
 
 let window;
+let tray;
+const isDebug = config.debug;
+const contextMenu = [
+    {label: 'Exit ' + config.appName, type: 'normal', click: app.exit},
+    {label: SocketStatus[language].Title + SocketStatus[language].Disconnected, enabled: false, id: 'tray-status'}
+];
+
 
 function createWindow() {
     const displayWidth = screen.getPrimaryDisplay().bounds.width;
-    // Create the browser window.
-    const image = nativeImage.createFromPath('/Users/nicojones/Documents/_Projects/electron-quick-start/' + config.trayIcon);
-    // image.resize({height: 30})
-    const appIcon = new Tray(image.resize({height: 20}))
-    appIcon.setContextMenu(Menu.buildFromTemplate([
-        {label: 'Exit ' + config.appName, type: 'normal', click: app.exit},
-    ]));
+
+    let appConfig = config;
+    if (isDebug) {
+        appConfig = { ...config, width: 1000, height: 1000, resizable: true };
+    }
+
     window = new BrowserWindow({
-        width: config.width,
-        height: config.height,
-        resizable: config.resizable,
-        x: displayWidth - config.width,
+        width: appConfig.width,
+        height: appConfig.height,
+        resizable: appConfig.resizable,
+        x: displayWidth - appConfig.width - 100,
         y: 200,
         alwaysOnTop: true,
         // icon: '/Users/nicojones/Documents/_Projects/electron-quick-start/images/scayla.png',
@@ -30,9 +36,18 @@ function createWindow() {
         }
     });
 
-    // and load the index.html of the app.
-    window.loadFile('index.html')
+    // Create the browser window.
+    const image = nativeImage.createFromPath('/Users/nicojones/Documents/_Projects/inline-edit-attachment/' + appConfig.trayIcon);
+    tray = new Tray(image.resize({height: 20}))
+    tray.setContextMenu(Menu.buildFromTemplate(contextMenu));
 
+    // and load the index.html of the app.
+    window.loadFile('index.html');
+    window.appIcon = tray;
+
+    if (isDebug) {
+        window.webContents.openDevTools();
+    }
     // Open the DevTools.
     // mainWindow.webContents.openDevTools()
 }
@@ -41,6 +56,7 @@ function createWindow() {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
+    console.log('App ready')
     createWindow();
 
     app.on('activate', function () {
@@ -59,6 +75,11 @@ app.whenReady().then(() => {
 
     ipcMain.on(IPCEvent.OpenFile, (event, options) => {
         shell.openPath(options.filePath);
+    });
+
+    ipcMain.on(IPCEvent.WebsocketStatusChange, (event, options) => {
+        contextMenu[1].label = SocketStatus[language].Title + (options.connected ? SocketStatus[language].Connected : SocketStatus[language].Disconnected);
+        window.appIcon.setContextMenu(Menu.buildFromTemplate(contextMenu));
     });
 });
 
